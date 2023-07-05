@@ -14,7 +14,7 @@
     <div class="card-group gap-3">
   <div class="card">
     <img src="./assets/img/sticker1.png" class="card-img-top imgchange" alt="amongus1" onclick="
-        img = document.querySelector('.imgchange');
+        const img = document.querySelector('.imgchange');
                     (img.classList.contains('imgchangered')) ? 
                         img.classList.remove('imgchangered')
                     :
@@ -26,7 +26,7 @@
   </div>
   <div class="card">
     <img src="./assets/img/sticker2.png" class="card-img-top imgchange2" alt="amongus2" onclick="
-        img = document.querySelector('.imgchange2');
+        const img = document.querySelector('.imgchange2');
                     (img.classList.contains('imgchangered')) ? 
                         img.classList.remove('imgchangered')
                     :
@@ -38,7 +38,7 @@
   </div>
   <div class="card">
     <img src="./assets/img/sticker3.png" class="card-img-top imgchange3" alt="amongus3" onclick="
-        img = document.querySelector('.imgchange3');
+        const img = document.querySelector('.imgchange3');
                     (img.classList.contains('imgchangered')) ? 
                         img.classList.remove('imgchangered')
                     :
@@ -51,15 +51,12 @@
 </div>
 <p class="alerta"></p>
 <a class="btn btn-primary" href="#" role="button" onclick="
-numero1 = Number(document.querySelector('.n1').value)
-numero2 = Number(document.querySelector('.n2').value)
-numero3 = Number(document.querySelector('.n3').value)
-console.log(numero1)
-console.log(numero2)
-console.log(numero3)
-alerta = document.querySelector('.alerta')
-maxsticker = document.querySelector('.maxsticker')
-total = numero1+numero2+numero3
+const numero1 = Number(document.querySelector('.n1').value)
+const numero2 = Number(document.querySelector('.n2').value)
+const numero3 = Number(document.querySelector('.n3').value)
+const alerta = document.querySelector('.alerta')
+const maxsticker = document.querySelector('.maxsticker')
+let total = numero1+numero2+numero3
 if(total <= 10){
   alerta.textContent = 'Llevas '+total+' stickers'
   maxsticker.textContent = ''
