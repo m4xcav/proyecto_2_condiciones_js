@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.imgchangered{
+    border: 2px solid red;
+}
+.number{
+    width: 10em;
+}
+
+
+/* PASSWORD */
+.centrar{
+   margin: 0 auto;
+}
+/* PASSWORD */
