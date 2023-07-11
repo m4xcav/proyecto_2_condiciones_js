@@ -50,19 +50,26 @@
   </div>
 </div>
 <p class="alerta"></p>
+<span id="errorspan"></span>
 <a class="btn btn-primary" href="#" role="button" onclick="
 const numero1 = Number(document.querySelector('.n1').value)
 const numero2 = Number(document.querySelector('.n2').value)
 const numero3 = Number(document.querySelector('.n3').value)
 const alerta = document.querySelector('.alerta')
 const maxsticker = document.querySelector('.maxsticker')
-let total = numero1+numero2+numero3
+const spanalert = document.querySelector('#errorspan')
+if(isNaN(numero1)||numero1 < 0 || isNaN(numero2) || numero2 <0 || isNaN(numero3) || numero3 < 0){
+spanalert.textContent = 'ingrese un número positivo válido'
+}else{
+  let total = numero1+numero2+numero3
 if(total <= 10){
   alerta.textContent = 'Llevas '+total+' stickers'
   maxsticker.textContent = ''
 }else{
   maxsticker.textContent = 'Llevas demasciados stickers'
   alerta.textContent = ''
+}
+spanalert.textContent = ''
 }
 ">Verificar</a> 
     </div>
